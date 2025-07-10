@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <!-- Meta Verification -->
     <meta name="facebook-domain-verification" content="bhc003kxujdn51nq3661m6lab8el0a" />
@@ -7,77 +7,93 @@
     <!-- Primary Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Momo & Oggy Fashion | Trendy Clothing Store</title>
-    <meta name="description" content="Discover the latest fashion trends at Momo & Oggy. Shop premium quality shirts, dresses, and accessories at affordable prices.">
+    <title>Momo & Oggy | Fashion, Game, Kuliner & Tour</title>
+    <meta name="description" content="Solusi lengkap untuk fashion terkini, top up game, makanan China autentik, dan paket tour Brazil eksklusif">
 
     <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://momoandoggy.github.io/">
-    <meta property="og:title" content="Momo & Oggy Fashion | Trendy Clothing Store">
-    <meta property="og:description" content="Discover the latest fashion trends at Momo & Oggy. Shop premium quality shirts, dresses, and accessories at affordable prices.">
-    <meta property="og:image" content="https://momoandoggy.github.io/images/social-banner.jpg">
+    <meta property="og:title" content="Momo & Oggy | Fashion, Game, Kuliner & Tour">
+    <meta property="og:description" content="Solusi lengkap untuk fashion terkini, top up game, makanan China autentik, dan paket tour Brazil eksklusif">
+    <meta property="og:image" content="https://momoandoggy.github.io/img/social-banner.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://momoandoggy.github.io/">
-    <meta property="twitter:title" content="Momo & Oggy Fashion | Trendy Clothing Store">
-    <meta property="twitter:description" content="Discover the latest fashion trends at Momo & Oggy. Shop premium quality shirts, dresses, and accessories at affordable prices.">
-    <meta property="twitter:image" content="https://momoandoggy.github.io/images/social-banner.jpg">
+    <meta property="twitter:title" content="Momo & Oggy | Fashion, Game, Kuliner & Tour">
+    <meta property="twitter:description" content="Solusi lengkap untuk fashion terkini, top up game, makanan China autentik, dan paket tour Brazil eksklusif">
+    <meta property="twitter:image" content="https://momoandoggy.github.io/img/social-banner.jpg">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --primary: #ff6b6b;
-            --secondary: #4ecdc4;
-            --dark: #292f36;
-            --light: #f7fff7;
-            --accent: #ff9f1c;
+            --primary: #FF6B6B;
+            --secondary: #4ECDC4;
+            --accent: #FF9F1C;
+            --dark: #292F36;
+            --light: #F7FFF7;
+            --china-red: #E31937;
+            --brazil-green: #009B3A;
         }
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
         
         body {
             background-color: #f8f9fa;
             color: var(--dark);
             line-height: 1.6;
+            overflow-x: hidden;
         }
         
+        /* Header & Navigation */
         header {
             background-color: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
+            padding: 0.5rem 0;
         }
         
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 5%;
+            padding: 0 5%;
             max-width: 1400px;
             margin: 0 auto;
         }
         
         .logo {
-            font-size: 1.8rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
             font-weight: 700;
             color: var(--primary);
             text-decoration: none;
+            display: flex;
+            align-items: center;
         }
         
         .logo span {
             color: var(--secondary);
+        }
+        
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
         }
         
         .nav-links {
@@ -89,55 +105,128 @@
             text-decoration: none;
             color: var(--dark);
             font-weight: 500;
-            transition: color 0.3s;
+            transition: all 0.3s;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary);
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
         }
         
         .nav-links a:hover {
             color: var(--primary);
         }
         
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3');
-            background-size: cover;
-            background-position: center;
-            height: 80vh;
+        .nav-actions {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            gap: 1rem;
             align-items: center;
-            text-align: center;
-            color: white;
-            padding: 0 1rem;
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin-bottom: 2rem;
         }
         
         .btn {
             display: inline-block;
-            background-color: var(--primary);
-            color: white;
-            padding: 0.8rem 1.8rem;
+            padding: 0.6rem 1.5rem;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s;
+            border: none;
+            cursor: pointer;
         }
         
-        .btn:hover {
-            background-color: var(--accent);
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #ff5252;
             transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
         }
         
-        .featured {
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 90vh;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+            z-index: 1;
+        }
+        
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+        
+        /* Business Categories */
+        .categories {
             padding: 5rem 5%;
             max-width: 1400px;
             margin: 0 auto;
@@ -149,30 +238,106 @@
         }
         
         .section-title h2 {
+            font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
             color: var(--dark);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background-color: var(--primary);
+            bottom: -10px;
+            left: 25%;
+        }
+        
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .category-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .category-img {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .category-content {
+            padding: 1.5rem;
+            position: relative;
+        }
+        
+        .category-badge {
+            position: absolute;
+            top: -20px;
+            right: 20px;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .category-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .category-desc {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        /* Featured Products */
+        .featured {
+            padding: 5rem 5%;
+            background-color: #f1f5f9;
         }
         
         .products {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
         }
         
         .product-card {
             background-color: white;
-            border-radius: 10px;
+            border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
+            transition: all 0.3s;
         }
         
         .product-card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
         }
         
         .product-img {
-            height: 300px;
+            height: 250px;
             width: 100%;
             object-fit: cover;
         }
@@ -181,81 +346,366 @@
             padding: 1.5rem;
         }
         
+        .product-category {
+            color: var(--primary);
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+        
         .product-title {
             font-size: 1.2rem;
             margin-bottom: 0.5rem;
+            font-weight: 600;
         }
         
         .product-price {
             font-weight: 700;
-            color: var(--primary);
+            color: var(--dark);
             font-size: 1.3rem;
             margin-bottom: 1rem;
         }
         
-        footer {
-            background-color: var(--dark);
+        .product-rating {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        
+        /* Membership Section */
+        .membership {
+            padding: 5rem 5%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
             color: white;
-            padding: 3rem 5%;
             text-align: center;
         }
         
-        .footer-content {
+        .membership-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .membership h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .membership p {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .membership-form {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .form-input {
+            flex: 1;
+            min-width: 250px;
+            padding: 0.8rem 1.2rem;
+            border-radius: 30px;
+            border: none;
+            font-size: 1rem;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 5rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .testimonial-text::before {
+            content: '"';
+            font-size: 3rem;
+            color: var(--primary);
+            position: absolute;
+            top: -20px;
+            left: -15px;
+            opacity: 0.3;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 1rem;
+        }
+        
+        .author-info h4 {
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+        
+        .author-info p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 4rem 5% 2rem;
+        }
+        
+        .footer-container {
             max-width: 1400px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            text-align: left;
+            gap: 3rem;
         }
         
-        .footer-column h3 {
-            color: var(--secondary);
+        .footer-col h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
             margin-bottom: 1.5rem;
-            font-size: 1.2rem;
+            position: relative;
+            display: inline-block;
         }
         
-        .footer-column ul {
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 2px;
+            background-color: var(--primary);
+            bottom: -5px;
+            left: 0;
+        }
+        
+        .footer-col ul {
             list-style: none;
         }
         
-        .footer-column ul li {
+        .footer-col ul li {
             margin-bottom: 0.8rem;
         }
         
-        .footer-column ul li a {
+        .footer-col ul li a {
             color: #ccc;
             text-decoration: none;
             transition: color 0.3s;
         }
         
-        .footer-column ul li a:hover {
+        .footer-col ul li a:hover {
             color: white;
+            padding-left: 5px;
         }
         
         .social-links {
             display: flex;
             gap: 1rem;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
         }
         
         .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
             color: white;
-            font-size: 1.5rem;
-            transition: color 0.3s;
+            transition: all 0.3s;
         }
         
         .social-links a:hover {
-            color: var(--secondary);
+            background-color: var(--primary);
+            transform: translateY(-3px);
         }
         
-        .copyright {
+        .newsletter p {
+            margin-bottom: 1rem;
+            color: #ccc;
+        }
+        
+        .newsletter-form {
+            display: flex;
+        }
+        
+        .newsletter-input {
+            flex: 1;
+            padding: 0.6rem 1rem;
+            border: none;
+            border-radius: 30px 0 0 30px;
+            font-size: 0.9rem;
+        }
+        
+        .newsletter-btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 0 1.2rem;
+            border-radius: 0 30px 30px 0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .newsletter-btn:hover {
+            background-color: #ff5252;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 3rem;
             margin-top: 3rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid #444;
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
         
-        @media (max-width: 768px) {
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            background-color: white;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 500px;
+            padding: 2rem;
+            position: relative;
+            animation: modalFadeIn 0.3s;
+        }
+        
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #666;
+            transition: color 0.3s;
+        }
+        
+        .close-modal:hover {
+            color: var(--primary);
+        }
+        
+        .modal-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--dark);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #ff5252;
+        }
+        
+        /* Verification Badge */
+        .verification-badge {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            font-size: 0.8rem;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+        
+        .verification-badge i {
+            color: #1877F2;
+            margin-right: 5px;
+            font-size: 1rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
             .navbar {
                 flex-direction: column;
                 gap: 1rem;
@@ -264,8 +714,16 @@
             
             .nav-links {
                 gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
             }
             
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2rem;
             }
@@ -273,19 +731,37 @@
             .hero p {
                 font-size: 1rem;
             }
+            
+            .hero-btns {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+            
+            .membership-form {
+                flex-direction: column;
+            }
+            
+            .form-input {
+                width: 100%;
+            }
         }
         
-        /* Verification Badge - Visible for verification purposes */
-        .verification-badge {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: white;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            font-size: 0.8rem;
-            z-index: 1000;
+        /* Animation */
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .floating {
+            animation: float 3s ease-in-out infinite;
         }
     </style>
 </head>
@@ -293,69 +769,477 @@
     <!-- Header -->
     <header>
         <nav class="navbar">
-            <a href="#" class="logo">Momo & <span>Oggy</span></a>
+            <a href="#" class="logo">
+                <img src="img/logo.png" alt="Momo & Oggy Logo">
+                <span>Momo & Oggy</span>
+            </a>
             <div class="nav-links">
-                <a href="#">Home</a>
-                <a href="#">Shop</a>
-                <a href="#">New Arrivals</a>
-                <a href="#">Collections</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
+                <a href="#home">Home</a>
+                <a href="#fashion">Fashion</a>
+                <a href="#games">Top Up Game</a>
+                <a href="#food">Makanan China</a>
+                <a href="#tours">Tour Brazil</a>
+                <a href="#about">Tentang Kami</a>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn btn-outline" id="loginBtn">Login</a>
+                <a href="#" class="btn btn-primary" id="registerBtn">Daftar Member</a>
             </div>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <h1>Summer Collection 2023</h1>
-        <p>Discover our premium selection of trendy outfits designed for comfort and style</p>
-        <a href="#" class="btn">Shop Now</a>
+    <section class="hero" id="home">
+        <video autoplay muted loop class="hero-video">
+            <source src="img/hero-video.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1>Solusi Lengkap Kebutuhan Anda</h1>
+            <p>Fashion terkini, top up game instan, makanan China autentik, dan pengalaman tour Brazil yang tak terlupakan</p>
+            <div class="hero-btns">
+                <a href="#fashion" class="btn btn-primary">Jelajahi Sekarang</a>
+                <a href="#" class="btn btn-outline" id="videoBtn">Tonton Video Kami</a>
+            </div>
+        </div>
     </section>
 
-    <!-- Featured Products -->
-    <section class="featured">
+    <!-- Business Categories -->
+    <section class="categories">
         <div class="section-title">
-            <h2>Featured Products</h2>
+            <h2>Layanan Kami</h2>
+        </div>
+        
+        <div class="category-grid">
+            <!-- Fashion -->
+            <div class="category-card">
+                <img src="img/fashion.jpg" alt="Fashion" class="category-img">
+                <div class="category-content">
+                    <span class="category-badge">Trending</span>
+                    <h3 class="category-title">Fashion Terkini</h3>
+                    <p class="category-desc">Koleksi pakaian terkini dengan kualitas premium dan harga terjangkau</p>
+                    <a href="#fashion" class="btn btn-outline">Lihat Koleksi</a>
+                </div>
+            </div>
+            
+            <!-- Top Up Game -->
+            <div class="category-card">
+                <img src="img/games.jpg" alt="Top Up Game" class="category-img">
+                <div class="category-content">
+                    <span class="category-badge">Instant</span>
+                    <h3 class="category-title">Top Up Game</h3>
+                    <p class="category-desc">Top up berbagai game populer dengan proses cepat dan aman</p>
+                    <a href="#games" class="btn btn-outline">Top Up Sekarang</a>
+                </div>
+            </div>
+            
+            <!-- Makanan China -->
+            <div class="category-card">
+                <img src="img/food.jpg" alt="Makanan China" class="category-img">
+                <div class="category-content">
+                    <span class="category-badge">Autentik</span>
+                    <h3 class="category-title">Makanan China</h3>
+                    <p class="category-desc">Rasa autentik China dengan bahan berkualitas dan higienis</p>
+                    <a href="#food" class="btn btn-outline">Lihat Menu</a>
+                </div>
+            </div>
+            
+            <!-- Tour Brazil -->
+            <div class="category-card">
+                <img src="img/tour.jpg" alt="Tour Brazil" class="category-img">
+                <div class="category-content">
+                    <span class="category-badge">Eksklusif</span>
+                    <h3 class="category-title">Tour Brazil</h3>
+                    <p class="category-desc">Pengalaman tak terlupakan menjelajahi keindahan Brazil</p>
+                    <a href="#tours" class="btn btn-outline">Jelajahi Paket</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fashion Section -->
+    <section class="featured" id="fashion">
+        <div class="section-title">
+            <h2>Koleksi Fashion</h2>
         </div>
         
         <div class="products">
             <!-- Product 1 -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3" alt="Men's Casual Shirt" class="product-img">
+                <img src="img/fashion1.jpg" alt="Kemeja Pria" class="product-img">
                 <div class="product-info">
-                    <h3 class="product-title">Men's Casual Shirt</h3>
-                    <p class="product-price">$29.99</p>
-                    <a href="#" class="btn">Add to Cart</a>
+                    <span class="product-category">Pria</span>
+                    <h3 class="product-title">Kemeja Slim Fit</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="product-price">Rp 249.000</p>
+                    <a href="#" class="btn btn-primary">Beli Sekarang</a>
                 </div>
             </div>
             
             <!-- Product 2 -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1543076447-215ad9ba6923?ixlib=rb-4.0.3" alt="Women's Summer Dress" class="product-img">
+                <img src="img/fashion2.jpg" alt="Dress Wanita" class="product-img">
                 <div class="product-info">
-                    <h3 class="product-title">Women's Summer Dress</h3>
-                    <p class="product-price">$39.99</p>
-                    <a href="#" class="btn">Add to Cart</a>
+                    <span class="product-category">Wanita</span>
+                    <h3 class="product-title">Summer Dress</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p class="product-price">Rp 349.000</p>
+                    <a href="#" class="btn btn-primary">Beli Sekarang</a>
                 </div>
             </div>
             
             <!-- Product 3 -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3" alt="Unisex Hoodie" class="product-img">
+                <img src="img/fashion3.jpg" alt="Sepatu Sneakers" class="product-img">
                 <div class="product-info">
-                    <h3 class="product-title">Unisex Hoodie</h3>
-                    <p class="product-price">$49.99</p>
-                    <a href="#" class="btn">Add to Cart</a>
+                    <span class="product-category">Aksesoris</span>
+                    <h3 class="product-title">Sneakers Casual</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="product-price">Rp 599.000</p>
+                    <a href="#" class="btn btn-primary">Beli Sekarang</a>
                 </div>
             </div>
             
             <!-- Product 4 -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?ixlib=rb-4.0.3" alt="Women's T-Shirt" class="product-img">
+                <img src="img/fashion4.jpg" alt="Tas Wanita" class="product-img">
                 <div class="product-info">
-                    <h3 class="product-title">Women's T-Shirt</h3>
-                    <p class="product-price">$24.99</p>
-                    <a href="#" class="btn">Add to Cart</a>
+                    <span class="product-category">Aksesoris</span>
+                    <h3 class="product-title">Handbag Premium</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="product-price">Rp 899.000</p>
+                    <a href="#" class="btn btn-primary">Beli Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Up Games Section -->
+    <section class="featured" id="games" style="background-color: #e8f4f8;">
+        <div class="section-title">
+            <h2>Top Up Game</h2>
+        </div>
+        
+        <div class="products">
+            <!-- Game 1 -->
+            <div class="product-card">
+                <img src="img/game1.jpg" alt="Mobile Legends" class="product-img">
+                <div class="product-info">
+                    <span class="product-category">Mobile</span>
+                    <h3 class="product-title">Mobile Legends</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="product-price">Mulai Rp 10.000</p>
+                    <a href="#" class="btn btn-primary">Top Up Sekarang</a>
+                </div>
+            </div>
+            
+            <!-- Game 2 -->
+            <div class="product-card">
+                <img src="img/game2.jpg" alt="Free Fire" class="product-img">
+                <div class="product-info">
+                    <span class="product-category">Battle Royale</span>
+                    <h3 class="product-title">Free Fire</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p class="product-price">Mulai Rp 5.000</p>
+                    <a href="#" class="btn btn-primary">Top Up Sekarang</a>
+                </div>
+            </div>
+            
+            <!-- Game 3 -->
+            <div class="product-card">
+                <img src="img/game3.jpg" alt="Valorant" class="product-img">
+                <div class="product-info">
+                    <span class="product-category">PC</span>
+                    <h3 class="product-title">Valorant</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="product-price">Mulai Rp 25.000</p>
+                    <a href="#" class="btn btn-primary">Top Up Sekarang</a>
+                </div>
+            </div>
+            
+            <!-- Game 4 -->
+            <div class="product-card">
+                <img src="img/game4.jpg" alt="Genshin Impact" class="product-img">
+                <div class="product-info">
+                    <span class="product-category">Cross-Platform</span>
+                    <h3 class="product-title">Genshin Impact</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="product-price">Mulai Rp 15.000</p>
+                    <a href="#" class="btn btn-primary">Top Up Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chinese Food Section -->
+    <section class="featured" id="food" style="background-color: #fff5f5;">
+        <div class="section-title">
+            <h2>Menu Makanan China</h2>
+        </div>
+        
+        <div class="products">
+            <!-- Food 1 -->
+            <div class="product-card">
+                <img src="img/food1.jpg" alt="Dim Sum" class="product-img">
+                <div class="product-info">
+                    <span class="product-category">Appetizer</span>
+                    <h3 class="product-title">Dim Sum Special</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="product-price">Rp 75.000</p>
+                    <a href="#" class="btn btn-primary">Pesan Sekarang</a>
+                </div>
+            </div>
+            
+            <!-- Food 2 -->
+            <div class="product-card">
+                <img src="img/food2.jpg" alt="Peking Duck" class="product-img">
+                <div class="product-info">
+                    <span class="product-category">Main Course</span>
+                    <h3 class="product-title">Peking Duck</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="product-price">Rp 350.000</p>
+                    <a href="#" class="btn btn-primary">Pesan Sekarang</a>
+                </div>
+            </div>
+            
+            <!-- Food 3 -->
+            <div class="product-card">
+                <img src="img/food3.jpg" alt="Hot Pot" class="product-img">
+                <div class="product-info">
+                    <span class="product-category">Special</span>
+                    <h3 class="product-title">Sichuan Hot Pot</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p class="product-price">Rp 250.000</p>
+                    <a href="#" class="btn btn-primary">Pesan Sekarang</a>
+                </div>
+            </div>
+            
+            <!-- Food 4 -->
+            <div class="product-card">
+                <img src="img/food4.jpg" alt="Bubble Tea" class="product-img">
+                <div class="product-info">
+                    <span class="product-category">Minuman</span>
+                    <h3 class="product-title">Premium Bubble Tea</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="product-price">Rp 35.000</p>
+                    <a href="#" class="btn btn-primary">Pesan Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brazil Tours Section -->
+    <section class="featured" id="tours" style="background-color: #f0f8f0;">
+        <div class="section-title">
+            <h2>Paket Tour Brazil</h2>
+        </div>
+        
+        <div class="products">
+            <!-- Tour 1 -->
+            <div class="product-card">
+                <img src="img/tour1.jpg" alt="Rio de Janeiro" class="product-img">
+                <div class="product-info">
+                    <span class="product-category">7 Hari</span>
+                    <h3 class="product-title">Rio Explorer</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="product-price">Mulai Rp 25.000.000</p>
+                    <a href="#" class="btn btn-primary">Detail Paket</a>
+                </div>
+            </div>
+            
+            <!-- Tour 2 -->
+            <div class="product-card">
+                <img src="img/tour2.jpg" alt="Amazon Adventure" class="product-img">
+                <div class="product-info">
+                    <span class="product-category">5 Hari</span>
+                    <h3 class="product-title">Amazon Adventure</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p class="product-price">Mulai Rp 18.000.000</p>
+                    <a href="#" class="btn btn-primary">Detail Paket</a>
+                </div>
+            </div>
+            
+            <!-- Tour 3 -->
+            <div class="product-card">
+                <img src="img/tour3.jpg" alt="Carnival Experience" class="product-img">
+                <div class="product-info">
+                    <span class="product-category">Special Event</span>
+                    <h3 class="product-title">Carnival Experience</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="product-price">Mulai Rp 30.000.000</p>
+                    <a href="#" class="btn btn-primary">Detail Paket</a>
+                </div>
+            </div>
+            
+            <!-- Tour 4 -->
+            <div class="product-card">
+                <img src="img/tour4.jpg" alt="Brazil Highlights" class="product-img">
+                <div class="product-info">
+                    <span class="product-category">10 Hari</span>
+                    <h3 class="product-title">Brazil Highlights</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="product-price">Mulai Rp 35.000.000</p>
+                    <a href="#" class="btn btn-primary">Detail Paket</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Section -->
+    <section class="membership">
+        <div class="membership-container">
+            <h2>Daftar Member Premium</h2>
+            <p>Dapatkan akses eksklusif ke promo, diskon khusus, dan layanan prioritas dengan menjadi member kami</p>
+            <form class="membership-form">
+                <input type="text" class="form-input" placeholder="Nama Lengkap" required>
+                <input type="email" class="form-input" placeholder="Alamat Email" required>
+                <input type="tel" class="form-input" placeholder="Nomor Telepon" required>
+                <button type="submit" class="btn btn-primary">Daftar Sekarang</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="section-title">
+            <h2>Apa Kata Pelanggan Kami</h2>
+        </div>
+        
+        <div class="testimonial-grid">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+                <div class="testimonial-text">
+                    Koleksi fashion di Momo & Oggy selalu up-to-date dengan harga yang bersaing. Kualitas produk sangat memuaskan!
+                </div>
+                <div class="testimonial-author">
+                    <img src="img/testi1.jpg" alt="Sarah" class="author-img">
+                    <div class="author-info">
+                        <h4>Sarah Wijaya</h4>
+                        <p>Pelanggan Fashion</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+                <div class="testimonial-text">
+                    Top up game di sini sangat cepat dan aman. CS-nya juga ramah dan responsif. Recommended banget!
+                </div>
+                <div class="testimonial-author">
+                    <img src="img/testi2.jpg" alt="Budi" class="author-img">
+                    <div class="author-info">
+                        <h4>Budi Santoso</h4>
+                        <p>Gamer</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+                <div class="testimonial-text">
+                    Makanan China di sini benar-benar autentik! Rasa dan penyajiannya seperti di restoran premium tapi dengan harga yang lebih terjangkau.
+                </div>
+                <div class="testimonial-author">
+                    <img src="img/testi3.jpg" alt="Lisa" class="author-img">
+                    <div class="author-info">
+                        <h4>Lisa Halim</h4>
+                        <p>Food Enthusiast</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -363,70 +1247,202 @@
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-column">
-                <h3>Shop</h3>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Tentang Kami</h3>
                 <ul>
-                    <li><a href="#">Men's Clothing</a></li>
-                    <li><a href="#">Women's Clothing</a></li>
-                    <li><a href="#">Accessories</a></li>
-                    <li><a href="#">New Arrivals</a></li>
-                    <li><a href="#">Sale</a></li>
+                    <li><a href="#">Sejarah</a></li>
+                    <li><a href="#">Visi & Misi</a></li>
+                    <li><a href="#">Tim Kami</a></li>
+                    <li><a href="#">Karir</a></li>
+                    <li><a href="#">Blog</a></li>
                 </ul>
             </div>
             
-            <div class="footer-column">
-                <h3>Help</h3>
+            <div class="footer-col">
+                <h3>Layanan</h3>
                 <ul>
-                    <li><a href="#">Customer Service</a></li>
-                    <li><a href="#">Track Order</a></li>
-                    <li><a href="#">Returns & Exchanges</a></li>
-                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#fashion">Fashion</a></li>
+                    <li><a href="#games">Top Up Game</a></li>
+                    <li><a href="#food">Makanan China</a></li>
+                    <li><a href="#tours">Tour Brazil</a></li>
+                    <li><a href="#">Member Premium</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Bantuan</h3>
+                <ul>
                     <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Hubungi Kami</a></li>
+                    <li><a href="#">Pengembalian</a></li>
+                    <li><a href="#">Syarat & Ketentuan</a></li>
+                    <li><a href="#">Kebijakan Privasi</a></li>
                 </ul>
             </div>
             
-            <div class="footer-column">
-                <h3>About</h3>
-                <ul>
-                    <li><a href="#">Our Story</a></li>
-                    <li><a href="#">Sustainability</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-column">
-                <h3>Connect</h3>
-                <p>Subscribe to our newsletter for updates and promotions</p>
+            <div class="footer-col newsletter">
+                <h3>Newsletter</h3>
+                <p>Berlangganan newsletter kami untuk mendapatkan promo dan update terbaru</p>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Alamat Email Anda" required>
+                    <button type="submit" class="newsletter-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
         </div>
         
-        <div class="copyright">
-            <p>&copy; 2023 Momo & Oggy Fashion. All rights reserved.</p>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Momo & Oggy Multibisnis. All rights reserved.</p>
             <p>Domain: momoandoggy.github.io | Meta Verified</p>
         </div>
     </footer>
 
-    <!-- Verification Badge (Visible for verification) -->
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="modal-title">Login Member</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail" class="form-label">Email</label>
+                    <input type="email" id="loginEmail" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword" class="form-label">Password</label>
+                    <input type="password" id="loginPassword" class="form-control" required>
+                </div>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+            <p style="text-align: center; margin-top: 1rem;">Belum punya akun? <a href="#" id="switchToRegister">Daftar disini</a></p>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="modal-title">Daftar Member</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="regName" class="form-label">Nama Lengkap</label>
+                    <input type="text" id="regName" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="regEmail" class="form-label">Email</label>
+                    <input type="email" id="regEmail" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPhone" class="form-label">Nomor Telepon</label>
+                    <input type="tel" id="regPhone" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPassword" class="form-label">Password</label>
+                    <input type="password" id="regPassword" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="regConfirmPassword" class="form-label">Konfirmasi Password</label>
+                    <input type="password" id="regConfirmPassword" class="form-control" required>
+                </div>
+                <button type="submit" class="submit-btn">Daftar Sekarang</button>
+            </form>
+            <p style="text-align: center; margin-top: 1rem;">Sudah punya akun? <a href="#" id="switchToLogin">Login disini</a></p>
+        </div>
+    </div>
+
+    <!-- Verification Badge -->
     <div class="verification-badge">
-        Meta Verified: bhc003kxujdn51nq3661m6lab8el0a
+        <i class="fab fa-facebook"></i>
+        <span>Meta Verified: bhc003kxujdn51nq3661m6lab8el0a</span>
     </div>
 
     <script>
         // Auto-update year in footer
-        document.querySelector('.copyright p').innerHTML = `&copy; ${new Date().getFullYear()} Momo & Oggy Fashion. All rights reserved.`;
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Modal functionality
+        const loginBtn = document.getElementById('loginBtn');
+        const registerBtn = document.getElementById('registerBtn');
+        const loginModal = document.getElementById('loginModal');
+        const registerModal = document.getElementById('registerModal');
+        const closeBtns = document.querySelectorAll('.close-modal');
+        const switchToRegister = document.getElementById('switchToRegister');
+        const switchToLogin = document.getElementById('switchToLogin');
+        
+        // Show login modal
+        loginBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            loginModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+        
+        // Show register modal
+        registerBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            registerModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+        
+        // Close modals
+        closeBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                loginModal.style.display = 'none';
+                registerModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+        });
+        
+        // Switch between login and register
+        switchToRegister.addEventListener('click', function(e) {
+            e.preventDefault();
+            loginModal.style.display = 'none';
+            registerModal.style.display = 'flex';
+        });
+        
+        switchToLogin.addEventListener('click', function(e) {
+            e.preventDefault();
+            registerModal.style.display = 'none';
+            loginModal.style.display = 'flex';
+        });
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', function(e) {
+            if (e.target === loginModal) {
+                loginModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+            if (e.target === registerModal) {
+                registerModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Form submission
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Login berhasil!');
+            loginModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+        
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Pendaftaran berhasil! Silakan login.');
+            registerModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
         
         // Console verification message
         console.log('%cMeta Verification Active: bhc003kxujdn51nq3661m6lab8el0a', 
-                   'color: #e63946; font-weight: bold; font-size: 16px;');
+                   'color: #1877F2; font-weight: bold; font-size: 16px;');
         console.log('%cVerified Domain: momoandoggy.github.io',
                    'color: #1d3557; font-weight: bold;');
     </script>
